@@ -1,0 +1,4 @@
+create database if not exists arthurimstest;
+create table arthurimstest.customers(customer_id int primary key auto_increment, fname varchar(50) NOT NULL, surname varchar(50) NOT NULL, email varchar(50));
+CREATE TABLE arthurimstest.items(item_id int primary key auto_increment, item_name varchar(75) NOT NULL, item_cost double NOT NULL);
+CREATE TABLE arthurimstest.orders(order_id int primary key auto_increment, fk_customer_id int NOT NULL, fk_item_id int NOT NULL, order_cost double NOT NULL, order_date date NOT NULL, quantity int NOT NULL, FOREIGN KEY (fk_customer_id) REFERENCES arthurimstest.customers(customer_id), FOREIGN KEY (fk_item_id) REFERENCES arthurimstest.items(item_id));

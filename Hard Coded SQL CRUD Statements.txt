@@ -1,0 +1,57 @@
+CRUD STATEMENTS:
+
+C- Create:
+INSERT INTO customer (fname, surname, username, password, email)
+VALUES ("Eoin", "Rafferty", "eoinraff", "password", "eoin@email.com");
+
+INSERT INTO item (item_name, item_cost)
+VALUES ("Car1", 2000.00);
+
+INSERT INTO orders (order_cost, order_date)
+VALUES (2000.00, 2020-07-06);
+
+INSERT INTO order_items (dispatch_date, total_cost)
+VALUES (2020-07-06, 2000.00);
+
+R - Read:
+SELECT customer_id, fname, surname 
+FROM customer;
+
+SELECT item_id, item_name, item_cost 
+FROM item;
+
+SELECT order_id, order_cost, order_date
+FROM orders;
+
+SELECT order_items_id, fk_order_id, dispatch_date, total_cost
+FROM order_items;
+
+U - Update (template):
+UPDATE customer
+SET email = 'eoin@email.com'
+WHERE customer id = '1';
+
+UPDATE item
+SET item_cost = '2200.00'
+WHERE item_id = '1';
+
+UPDATE orders
+SET order_date = '2020-07-06'
+WHERE order_id = '1';
+
+UPDATE order_items
+SET dispatch_date = '2020-07-06'
+WHERE order_items_id = '1';
+
+D- Delete:
+DELETE FROM customer
+WHERE customer_id = '1';
+
+DELETE FROM item
+WHERE item_id = '1';
+
+DELETE FROM orders
+WHERE order_id = '1';
+
+DELETE FROM order_items
+WHERE order_items_id = '1';
