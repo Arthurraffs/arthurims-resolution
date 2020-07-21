@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ItemController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">arthurims</a> &gt; <a href="index.source.html" class="el_package">com.qa.ims.controller</a> &gt; <span class="el_source">ItemController.java</span></div><h1>ItemController.java</h1><pre class="source lang-java linenums">package com.qa.ims.controller;
+
+import java.util.List;
+import org.apache.log4j.Logger;
+import com.qa.ims.persistence.domain.Item;
+import com.qa.ims.services.CrudServices;
+import com.qa.ims.utils.Utils;
+
+public class ItemController implements CrudController&lt;Item&gt; {
+
+<span class="fc" id="L11">	public static final Logger LOGGER = Logger.getLogger(ItemController.class);</span>
+
+	private CrudServices&lt;Item&gt; itemService;
+
+<span class="fc" id="L15">	public ItemController(CrudServices&lt;Item&gt; itemService) {</span>
+<span class="fc" id="L16">			this.itemService = itemService;</span>
+<span class="fc" id="L17">		}</span>
+
+	String getInput() {
+<span class="nc" id="L20">		return Utils.getInput();</span>
+	}
+
+	/**
+	 * Reads all item to the logger
+	 */
+	@Override
+	public List&lt;Item&gt; readAll() {
+<span class="fc" id="L28">		List&lt;Item&gt; items = itemService.readAll();</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">		for (Item item : items) {</span>
+<span class="fc" id="L30">			LOGGER.info(item.toString());</span>
+<span class="fc" id="L31">		}</span>
+<span class="fc" id="L32">		return items;</span>
+	}
+
+	/**
+	 * Creates an item by taking in user input
+	 */
+	@Override
+	public Item create() {
+<span class="fc" id="L40">		LOGGER.info(&quot;Please enter an item name&quot;);</span>
+<span class="fc" id="L41">		String item_name = getInput();</span>
+<span class="fc" id="L42">		LOGGER.info(&quot;Please enter an item cost&quot;);</span>
+<span class="fc" id="L43">		String item_cost = getInput();</span>
+<span class="fc" id="L44">		Item item = itemService.create(new Item(item_name, item_cost));</span>
+<span class="fc" id="L45">		LOGGER.info(&quot;Order created&quot;);</span>
+<span class="fc" id="L46">		return item;</span>
+	}
+
+	/**
+	 * Updates an existing item by taking in user input
+	 */
+	@Override
+	public Item update() {
+<span class="fc" id="L54">		LOGGER.info(&quot;Please enter the id of the item you would like to update&quot;);</span>
+<span class="fc" id="L55">		int item_id = Integer.parseInt(getInput());</span>
+<span class="fc" id="L56">		LOGGER.info(&quot;Please enter an item name&quot;);</span>
+<span class="fc" id="L57">		String item_name = getInput();</span>
+<span class="fc" id="L58">		LOGGER.info(&quot;Please enter an item cost&quot;);</span>
+<span class="fc" id="L59">		String item_cost = getInput();</span>
+<span class="fc" id="L60">		Item item = itemService.update(new Item(item_id, item_name, item_cost));</span>
+<span class="fc" id="L61">		LOGGER.info(&quot;Item Updated&quot;);</span>
+<span class="fc" id="L62">		return item;</span>
+	}
+
+	/**
+	 * Deletes an existing item by the id of the item
+	 */
+	@Override
+	public void delete() {
+<span class="fc" id="L70">		LOGGER.info(&quot;Please enter the id of the item you would like to delete&quot;);</span>
+<span class="fc" id="L71">		int item_id = Integer.parseInt(getInput());</span>
+<span class="fc" id="L72">		itemService.delete(item_id);</span>
+<span class="fc" id="L73">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Customer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">arthurims</a> &gt; <a href="index.source.html" class="el_package">com.qa.ims.persistence.domain</a> &gt; <span class="el_source">Customer.java</span></div><h1>Customer.java</h1><pre class="source lang-java linenums">package com.qa.ims.persistence.domain;
+
+public class Customer {
+
+	private int customer_id;
+	private String fname;
+	private String surname;
+	private String email;
+
+<span class="fc" id="L10">	public Customer(String fname, String surname, String email) {</span>
+<span class="fc" id="L11">		this.fname = fname;</span>
+<span class="fc" id="L12">		this.surname = surname;</span>
+<span class="fc" id="L13">		this.email = email;</span>
+<span class="fc" id="L14">	}</span>
+
+<span class="fc" id="L16">	public Customer(int customer_id, String fname, String surname, String email) {</span>
+<span class="fc" id="L17">		this.customer_id = customer_id;</span>
+<span class="fc" id="L18">		this.fname = fname;</span>
+<span class="fc" id="L19">		this.surname = surname;</span>
+<span class="fc" id="L20">		this.email = email;</span>
+<span class="fc" id="L21">	}</span>
+
+	public int getCustomer_Id() {
+<span class="fc" id="L24">		return customer_id;</span>
+	}
+
+	public void setCustomer_Id(int customer_id) {
+<span class="fc" id="L28">		this.customer_id = customer_id;</span>
+<span class="fc" id="L29">	}</span>
+
+	public String getFname() {
+<span class="fc" id="L32">		return fname;</span>
+	}
+
+	public void setfname(String fname) {
+<span class="fc" id="L36">		this.fname = fname;</span>
+<span class="fc" id="L37">	}</span>
+
+	public String getSurname() {
+<span class="fc" id="L40">		return surname;</span>
+	}
+
+	public void setSurname(String surname) {
+<span class="fc" id="L44">		this.surname = surname;</span>
+<span class="fc" id="L45">	}</span>
+	
+	public String getEmail() {
+<span class="fc" id="L48">		return email;</span>
+	}
+
+	public void setEmail(String email) {
+<span class="fc" id="L52">		this.email = email;</span>
+<span class="fc" id="L53">	}</span>
+
+
+	public String toString() {
+<span class="fc" id="L57">		return &quot;customer id:&quot; + customer_id + &quot; first name:&quot; + fname + &quot; surname:&quot; + surname;</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="fc" id="L62">		final int prime = 31;</span>
+<span class="fc" id="L63">		int result = 1;</span>
+<span class="fc" id="L64">		result = prime * result + customer_id;</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">		result = prime * result + ((email == null) ? 0 : email.hashCode());</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">		result = prime * result + ((fname == null) ? 0 : fname.hashCode());</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">		result = prime * result + ((surname == null) ? 0 : surname.hashCode());</span>
+<span class="fc" id="L68">		return result;</span>
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+<span class="fc bfc" id="L73" title="All 2 branches covered.">		if (this == obj)</span>
+<span class="fc" id="L74">			return true;</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">		if (obj == null)</span>
+<span class="fc" id="L76">			return false;</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">		if (getClass() != obj.getClass())</span>
+<span class="fc" id="L78">			return false;</span>
+<span class="fc" id="L79">		Customer other = (Customer) obj;</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">		if (customer_id != other.customer_id)</span>
+<span class="fc" id="L81">			return false;</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">		if (email == null) {</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">			if (other.email != null)</span>
+<span class="nc" id="L84">				return false;</span>
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">		} else if (!email.equals(other.email))</span>
+<span class="nc" id="L86">			return false;</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">		if (fname == null) {</span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">			if (other.fname != null)</span>
+<span class="fc" id="L89">				return false;</span>
+<span class="fc bfc" id="L90" title="All 2 branches covered.">		} else if (!fname.equals(other.fname))</span>
+<span class="fc" id="L91">			return false;</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">		if (surname == null) {</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">			if (other.surname != null)</span>
+<span class="fc" id="L94">				return false;</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">		} else if (!surname.equals(other.surname))</span>
+<span class="fc" id="L96">			return false;</span>
+<span class="fc" id="L97">		return true;</span>
+	}
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -3474,3 +3474,44 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2020-07-17 21:45:15 INFO  Action:40 - UPDATE: To change an item already in the database
 2020-07-17 21:45:15 INFO  Action:40 - DELETE: To remove an item from the database
 2020-07-17 21:45:15 INFO  Action:40 - RETURN: To return to domain selection
+2020-07-21 15:54:10 INFO  CustomerController:37 - customer id:0 first name:Chris surname:P
+2020-07-21 15:54:10 INFO  CustomerController:37 - customer id:0 first name:Rhys surname:T
+2020-07-21 15:54:10 INFO  CustomerController:37 - customer id:0 first name:Nic surname:J
+2020-07-21 15:54:10 INFO  CustomerController:63 - Please enter the id of the customer you would like to update
+2020-07-21 15:54:10 INFO  CustomerController:65 - Please enter a first name
+2020-07-21 15:54:10 INFO  CustomerController:67 - Please enter a surname
+2020-07-21 15:54:10 INFO  CustomerController:69 - Please enter an email
+2020-07-21 15:54:10 INFO  CustomerController:72 - Customer Updated
+2020-07-21 15:54:10 INFO  CustomerController:47 - Please enter a first name
+2020-07-21 15:54:10 INFO  CustomerController:49 - Please enter a surname
+2020-07-21 15:54:10 INFO  CustomerController:51 - Please enter an email
+2020-07-21 15:54:10 INFO  CustomerController:54 - Customer created
+2020-07-21 15:54:10 INFO  CustomerController:81 - Please enter the id of the customer you would like to delete
+2020-07-21 15:54:11 INFO  ItemController:30 - Item id = 0, Item name = phone, Item cost = £250.0
+2020-07-21 15:54:11 INFO  ItemController:30 - Item id = 0, Item name = laptop, Item cost = £300.0
+2020-07-21 15:54:11 INFO  ItemController:30 - Item id = 0, Item name = tablet, Item cost = £350.0
+2020-07-21 15:54:11 INFO  ItemController:54 - Please enter the id of the item you would like to update
+2020-07-21 15:54:11 INFO  ItemController:56 - Please enter an item name
+2020-07-21 15:54:11 INFO  ItemController:58 - Please enter an item cost
+2020-07-21 15:54:11 INFO  ItemController:61 - Item Updated
+2020-07-21 15:54:11 INFO  ItemController:40 - Please enter an item name
+2020-07-21 15:54:11 INFO  ItemController:42 - Please enter an item cost
+2020-07-21 15:54:11 INFO  ItemController:45 - Order created
+2020-07-21 15:54:11 INFO  ItemController:70 - Please enter the id of the item you would like to delete
+2020-07-21 15:54:11 INFO  OrderController:32 - Order_id = 0, Customer_id = 1, Item_id = 1, Order_cost = 250.0, Order_date = 2020-01-01, Quantity = 1]
+2020-07-21 15:54:11 INFO  OrderController:32 - Order_id = 0, Customer_id = 2, Item_id = 2, Order_cost = 300.0, Order_date = 2020-01-01, Quantity = 1]
+2020-07-21 15:54:11 INFO  OrderController:32 - Order_id = 0, Customer_id = 3, Item_id = 3, Order_cost = 350.0, Order_date = 2020-01-01, Quantity = 1]
+2020-07-21 15:54:11 INFO  OrderController:62 - Please enter the id of the order you would like to update
+2020-07-21 15:54:11 INFO  OrderController:64 - Please enter a customer ID
+2020-07-21 15:54:11 INFO  OrderController:66 - Please enter an item ID
+2020-07-21 15:54:11 INFO  OrderController:68 - Please enter an order cost
+2020-07-21 15:54:11 INFO  OrderController:70 - Please enter an order date in format yyyy-mm-dd
+2020-07-21 15:54:11 INFO  OrderController:72 - Please enter an order quantity
+2020-07-21 15:54:11 INFO  OrderController:75 - Item Updated
+2020-07-21 15:54:11 INFO  OrderController:42 - Please enter a customer ID
+2020-07-21 15:54:11 INFO  OrderController:44 - Please enter an item ID
+2020-07-21 15:54:11 INFO  OrderController:46 - Please enter an order cost
+2020-07-21 15:54:11 INFO  OrderController:48 - Please enter an order date in format yyyy-mm-dd
+2020-07-21 15:54:11 INFO  OrderController:50 - Please enter a quantity
+2020-07-21 15:54:11 INFO  OrderController:53 - Order created
+2020-07-21 15:54:11 INFO  OrderController:84 - Please enter the id of the order you would like to delete
